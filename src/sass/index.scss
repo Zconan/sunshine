@@ -13,7 +13,6 @@
         border-bottom: 1px solid #DDD;
         padding-right: 31px;
         ul{
-            overflow: hidden;
             float: right;
             li{
                 float: left;
@@ -23,11 +22,165 @@
                     font-size: 12px;
                     line-height: 30px;
                     color: #999;
+                    &:hover{
+                        color: #F10215;
+                    }
+                }
+                i{
+                    display: inline-block;
+                    width: 10px;
+                    height: 5px;
+                    background: url(../img/header_list_arrow.png) no-repeat;
+                    margin-left: 4px;
                 }
             }
             li:nth-child(1){
                     background: none;
                 }
+            li:nth-child(2) a:nth-child(1){
+                color: #F10215;
+            }
+        }
+    }
+    .header_search{
+        height: 140px;
+        position: relative;
+        .logo{
+            position: absolute;
+            top: -31px;
+            a{
+                display: block;
+                width: 190px;
+                height: 171px;
+                background: url(../img/logo.png) no-repeat 22px 55px;
+            }
+        }
+        .search{
+            width: 550px;
+            margin: 25px 0 0 320px;
+            input{
+                width: 500px;
+                height: 35px;
+                border: 1px solid #F10215;
+                box-sizing: border-box;
+                float: left;
+            }
+            button{
+                width: 50px;
+                height: 35px;
+                float: right;
+                background: #F10215;
+                color: #fff;
+                margin-top: -1px;
+            }
+        }
+        .recommend{
+            margin-left: 320px;
+            li{
+                float: left;
+                padding: 0 5px;
+                a{
+                    display: block;
+                    height: 30px;
+                    font-size: 12px;
+                    line-height: 30px;
+                    color: #999;
+                    &:hover{
+                        color: #F10215;
+                        text-decoration: none;
+                    }
+                }
+            }
+            li:nth-child(1) a{
+                color: #F10215;
+            }
+        }
+        .classify{
+            margin: 10px 0 0 230px;
+            li{
+                float: left;
+                padding: 0 15px;
+                a{
+                    display: block;
+                    height: 40px;
+                    line-height: 40px;
+                    color: #666;
+                    font-weight: bolder;
+                    &:hover{
+                        color: #F10215;
+                    }
+                }
+            }
+        }
+        .car{
+            width: 141px;
+            height: 32px;
+            border: 1px solid #E3E4E5;
+            box-sizing: border-box;
+            position: absolute;
+            top: 28px;
+            right: 0;
+        }
+    }
+}
+
+/*banner部分*/
+#banner{
+    background: #F6F6F6;
+    .banner{
+        .left,.right{
+            width: 190px;
+            height: 480px;
+        }
+        .left{
+            float: left;
+            background: #6C6669;
+            padding-top: 16px;
+            box-sizing: border-box;
+            li{
+                height: 30px;
+                padding-left: 12px;
+                a{
+                    line-height: 30px;
+                    color: #fff;
+                    &:hover{
+                        color: #F10215;
+                    }
+                }
+                &:hover{
+                    background: rgba(204,204,204,0.5);
+                }
+            }
+        }
+        .middle{
+            float: left;
+            width: 790px;
+            height: 480px;
+            margin-left: 10px;
+            .top{
+                overflow: hidden;
+                height: 340px;
+                position: relative;
+                ul{
+                    position: absolute;
+                    li{
+                        float: left;
+                    }
+                }
+                div{
+                    position: absolute;
+                    width: 170px;
+                    height: 20px;
+                    bottom: 20px;
+                    left: 310px;
+                    border-radius: 8px;
+                    background: rgba(204,204,204,0.5);
+                }
+            }
+        }
+        .right{
+            float: right;
+            background: #fff;
         }
     }
 }

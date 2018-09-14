@@ -13,7 +13,6 @@
 }
 
 #header .header_list ul {
-  overflow: hidden;
   float: right;
 }
 
@@ -29,6 +28,189 @@
   color: #999;
 }
 
+#header .header_list ul li a:hover {
+  color: #F10215;
+}
+
+#header .header_list ul li i {
+  display: inline-block;
+  width: 10px;
+  height: 5px;
+  background: url(../img/header_list_arrow.png) no-repeat;
+  margin-left: 4px;
+}
+
 #header .header_list ul li:nth-child(1) {
   background: none;
+}
+
+#header .header_list ul li:nth-child(2) a:nth-child(1) {
+  color: #F10215;
+}
+
+#header .header_search {
+  height: 140px;
+  position: relative;
+}
+
+#header .header_search .logo {
+  position: absolute;
+  top: -31px;
+}
+
+#header .header_search .logo a {
+  display: block;
+  width: 190px;
+  height: 171px;
+  background: url(../img/logo.png) no-repeat 22px 55px;
+}
+
+#header .header_search .search {
+  width: 550px;
+  margin: 25px 0 0 320px;
+}
+
+#header .header_search .search input {
+  width: 500px;
+  height: 35px;
+  border: 1px solid #F10215;
+  box-sizing: border-box;
+  float: left;
+}
+
+#header .header_search .search button {
+  width: 50px;
+  height: 35px;
+  float: right;
+  background: #F10215;
+  color: #fff;
+  margin-top: -1px;
+}
+
+#header .header_search .recommend {
+  margin-left: 320px;
+}
+
+#header .header_search .recommend li {
+  float: left;
+  padding: 0 5px;
+}
+
+#header .header_search .recommend li a {
+  display: block;
+  height: 30px;
+  font-size: 12px;
+  line-height: 30px;
+  color: #999;
+}
+
+#header .header_search .recommend li a:hover {
+  color: #F10215;
+  text-decoration: none;
+}
+
+#header .header_search .recommend li:nth-child(1) a {
+  color: #F10215;
+}
+
+#header .header_search .classify {
+  margin: 10px 0 0 230px;
+}
+
+#header .header_search .classify li {
+  float: left;
+  padding: 0 15px;
+}
+
+#header .header_search .classify li a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  color: #666;
+  font-weight: bolder;
+}
+
+#header .header_search .classify li a:hover {
+  color: #F10215;
+}
+
+#header .header_search .car {
+  width: 141px;
+  height: 32px;
+  border: 1px solid #E3E4E5;
+  box-sizing: border-box;
+  position: absolute;
+  top: 28px;
+  right: 0;
+}
+
+/*banner部分*/
+#banner {
+  background: #F6F6F6;
+}
+
+#banner .banner .left, #banner .banner .right {
+  width: 190px;
+  height: 480px;
+}
+
+#banner .banner .left {
+  float: left;
+  background: #6C6669;
+  padding-top: 16px;
+  box-sizing: border-box;
+}
+
+#banner .banner .left li {
+  height: 30px;
+  padding-left: 12px;
+}
+
+#banner .banner .left li a {
+  line-height: 30px;
+  color: #fff;
+}
+
+#banner .banner .left li a:hover {
+  color: #F10215;
+}
+
+#banner .banner .left li:hover {
+  background: rgba(204, 204, 204, 0.5);
+}
+
+#banner .banner .middle {
+  float: left;
+  width: 790px;
+  height: 480px;
+  margin-left: 10px;
+}
+
+#banner .banner .middle .top {
+  overflow: hidden;
+  height: 340px;
+  position: relative;
+}
+
+#banner .banner .middle .top ul {
+  position: absolute;
+}
+
+#banner .banner .middle .top ul li {
+  float: left;
+}
+
+#banner .banner .middle .top div {
+  position: absolute;
+  width: 170px;
+  height: 20px;
+  bottom: 20px;
+  left: 310px;
+  border-radius: 8px;
+  background: rgba(204, 204, 204, 0.5);
+}
+
+#banner .banner .right {
+  float: right;
+  background: #fff;
 }
