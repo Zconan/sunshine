@@ -1,0 +1,150 @@
+@charset "UTF-8";
+/*header部分*/
+#header .header {
+  width: 1210px;
+  margin: 0 auto;
+  padding-left: 107px;
+  box-sizing: border-box;
+}
+
+#header .header a {
+  float: left;
+  width: 150px;
+  height: 80px;
+  background: url(../img/logo.png) no-repeat 0 12px;
+}
+
+#header .header p {
+  float: left;
+  height: 80px;
+  line-height: 80px;
+  margin-left: 89px;
+  font-size: 24px;
+  padding-left: 18px;
+  color: #7B7B7B;
+  background: url(../img/reg_border.png) no-repeat left center;
+}
+
+/*banner部分*/
+#banner {
+  background: url(../img/login_banner.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+#banner .banner {
+  width: 1210px;
+  margin: 0 auto;
+  height: 425px;
+  padding-top: 50px;
+}
+
+#banner .banner .login {
+  width: 390px;
+  height: 322px;
+  background: #fff;
+  float: right;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+#banner .banner .login h4 {
+  height: 55px;
+  line-height: 55px;
+  font-size: 18px;
+  border-bottom: 1px solid #F4F4F4;
+  margin-bottom: 26px;
+}
+
+#banner .banner .login div {
+  width: 350px;
+  height: 40px;
+  margin-bottom: 15px;
+  border: 1px solid #BDBDBD;
+  box-sizing: border-box;
+}
+
+#banner .banner .login div i {
+  float: left;
+  width: 38px;
+  height: 37px;
+  background: #F3F3F3;
+  line-height: 37px;
+  text-align: center;
+  color: #D1D1D1;
+}
+
+#banner .banner .login div input {
+  float: right;
+  border-left: 1px solid #BDBDBD;
+  width: 309px;
+  height: 38px;
+  padding-left: 11px;
+}
+
+#banner .banner .login .save {
+  display: block;
+  width: 350px;
+  height: 18px;
+  font-size: 12px;
+}
+
+#banner .banner .login .save input {
+  float: left;
+  margin-top: 2px;
+}
+
+#banner .banner .login .save p {
+  float: left;
+  margin-left: 9px;
+  color: #666;
+  line-height: 18px;
+}
+
+#banner .banner .login .save a {
+  float: right;
+}
+
+#banner .banner .login button {
+  width: 350px;
+  height: 38px;
+  background: #E4393C;
+  font-size: 18px;
+  color: #fff;
+  border-radius: 3px;
+  margin-top: 13px;
+}
+
+#banner .banner .login .reg {
+  display: block;
+  margin-top: 10px;
+  border-top: 1px solid #F4F4F4;
+  padding: 20px 0 0 270px;
+  font-size: 12px;
+}
+
+#banner .banner .login .reg i {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  background: #E4393C;
+  line-height: 16px;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+}
+
+#banner .banner .login .reg a {
+  color: #E4393C;
+}
+
+/*footer部分*/
+#footer .footer {
+  height: 68px;
+  padding-top: 26px;
+  border-top: 1px solid #E1E1E1;
+  text-align: center;
+  color: #999;
+  line-height: 22px;
+  font-size: 12px;
+}

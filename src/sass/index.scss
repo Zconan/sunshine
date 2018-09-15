@@ -177,10 +177,82 @@
                     background: rgba(204,204,204,0.5);
                 }
             }
+            .bottom{
+                margin-top: 10px;
+            }
         }
         .right{
             float: right;
             background: #fff;
+            .top{
+                height: 115px;
+                box-sizing: border-box;
+                padding: 15px 0 0 10px;
+                border-bottom: 1px solid #E6E6E6;
+                position: relative;
+                img{
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50%;
+                    float: left;
+                }
+                span:nth-child(2){
+                    float: left;
+                    margin-left: 15px;
+                    a{
+                        color: #000;
+                    }
+                }
+                span:nth-child(3),span:nth-child(4){
+                    position: absolute;
+                    bottom: 16px;
+                    width: 74px;
+                    height: 24px;
+                    border: 2px solid #E01222;
+                    margin-top: 15px;
+                    text-align: center;
+                    a{                  
+                        color: #E01222;
+                        font-size: 12px;
+                    }
+                }
+                span:nth-child(3){
+                    left: 15px;
+                }
+                span:nth-child(4){
+                    left: 99px;
+                }
+            }
+            .bottom{
+                padding-left: 13px;
+                p{
+                    overflow: hidden;
+                    border-bottom: 1px solid #E6E6E6;
+                    span{
+                        float: left;
+                        height: 28px;
+                        line-height: 28px;
+                        padding: 0 6px;
+                        cursor: pointer;
+                    }
+                    span.active{
+                        border-bottom: 2px solid #DB192B;
+                    }
+                }
+                ul{
+                    margin-top: 13px;
+                    li{
+                        height: 22px;
+                        line-height: 22px;
+                        a{
+                            color: #666;
+                        }
+                    }
+                }
+                ul:nth-child(3){
+                    display: none;
+                }
+            }
         }
     }
 }

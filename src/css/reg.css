@@ -1,0 +1,151 @@
+@charset "UTF-8";
+/*header部分*/
+#header {
+  box-shadow: 0 4px 4px #F1F1F1;
+}
+
+#header .header {
+  padding: 0 101px;
+  box-sizing: border-box;
+}
+
+#header .header .logo {
+  float: left;
+  width: 150px;
+  height: 100px;
+  background: url(../img/logo.png) no-repeat 0 12px;
+}
+
+#header .header p {
+  height: 100px;
+  line-height: 100px;
+}
+
+#header .header p:nth-child(2) {
+  float: left;
+  margin-left: 89px;
+  font-size: 24px;
+  padding-left: 18px;
+  color: #7B7B7B;
+  background: url(../img/reg_border.png) no-repeat left center;
+}
+
+#header .header p:nth-child(3) {
+  float: right;
+  font-size: 14px;
+  color: #999;
+}
+
+#header .header p:nth-child(3) a {
+  color: #666;
+}
+
+#header .header p:nth-child(3) a:hover {
+  color: #F10215;
+}
+
+/*middle部分*/
+#middle .middle {
+  height: 550px;
+  padding: 56px 101px 0 101px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+#middle .middle div {
+  width: 700px;
+  height: 40px;
+  margin-bottom: 22px;
+}
+
+#middle .middle div label {
+  width: 72px;
+  height: 40px;
+  float: left;
+  padding-right: 11px;
+  line-height: 40px;
+  text-align: right;
+  font-size: 12px;
+  color: #666;
+  font-weight: bolder;
+}
+
+#middle .middle div input {
+  width: 350px;
+  height: 40px;
+  float: left;
+  box-sizing: border-box;
+  border: 1px solid #DDD;
+  padding-left: 10px;
+}
+
+#middle .middle div button {
+  width: 140px;
+  height: 40px;
+  margin-left: 10px;
+  border-radius: 2px;
+  background: #F0F0F0;
+  font-size: 16px;
+  color: #fff;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+#middle .middle div span {
+  float: left;
+  height: 40px;
+  font-size: 6px;
+  line-height: 40px;
+  color: red;
+}
+
+#middle .middle p {
+  height: 48px;
+  padding-left: 83px;
+  line-height: 48px;
+  margin-bottom: 4px;
+  font-size: 12px;
+  color: #666;
+}
+
+#middle .middle p input {
+  margin-top: -2px;
+}
+
+#middle .middle .btn {
+  width: 350px;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  font-size: 16px;
+  background: #EE2222;
+  border-radius: 2px;
+  margin-left: 83px;
+  cursor: pointer;
+}
+
+#middle .middle .brand {
+  position: absolute;
+  top: 96px;
+  left: 829px;
+  border: 1px solid #D1EEFF;
+  width: 200px;
+  height: 180px;
+}
+
+#middle .middle .brand a {
+  display: block;
+  height: 180px;
+  background: url(../img/reg_brand.jpg) no-repeat;
+}
+
+/*footer部分*/
+#footer .footer {
+  height: 68px;
+  padding-top: 26px;
+  border-top: 1px solid #E1E1E1;
+  text-align: center;
+  color: #999;
+  line-height: 22px;
+  font-size: 12px;
+}
