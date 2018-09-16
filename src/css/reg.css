@@ -96,7 +96,7 @@
   height: 40px;
   font-size: 6px;
   line-height: 40px;
-  color: red;
+  margin-left: 5px;
 }
 
 #middle .middle p {

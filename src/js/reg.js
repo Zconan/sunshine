@@ -1,37 +1,50 @@
 document.addEventListener('DOMContentLoaded',()=>{
     (function(){
         //获取相关元素
-        let username = document.querySelector('#username');
-
-        //存储状态
+        let middle = document.querySelector('.middle');
+        //获取div下的span标签
+        let span = document.querySelectorAll('.middle div span');
+        //响应状态
         let statusCode = [200,304];
-
-        //检测用户名是否存在
-        username.onblur = ()=>{
-            //获取输入框的值
-            let _username = username.value;
-            //获取span标签
-            let span = username.nextElementSibling;
-            //正则判断用户名是否规范
-            let reg = /^[a-zA-Z0-9\u4E00-\u9FA5][a-zA-Z0-9\u4E00-\u9FA5]{2,6}$/;
-            if(!reg.test(_username)){
-                span.innerText = '请输入3-7位仅由字母、数字或中文组成的用户名';
-            }else if(reg.test(_username)){
-                span.style.display = 'none';
-                //创建ajax对象
-                let xhr = new XMLHttpRequest();
-                //处理服务器返回数据
-                xhr.onreadystatechange = function(){
-                    if(xhr.readyState === 400 && statusCode.indexOf(xhr.status) >= 0){
-                       let res = xhr.responseText;
-                       console.log(res); 
-                    }
+        //创建ajax对象
+        let xhr = new XMLHttpRequest();
+        //处理服务器返回数据
+        xhr.onload = ()=>{
+            if(statusCode.indexOf(xhr.status) >= 0){
+                let res = xhr.responseText;
+                if(res === 'yes'){
+                    span[1].innerText = 'success';
                 }
-                //设置请求参数，建立与服务器的连接
-                xhr.open('get','../api/check_reg.php?username='+_username,true);
-                //向服务器发送请求
-                xhr.send();
             }
-        }       
+        }
+
+        //事件委托绑定事件
+        middle.oninput = e=>{
+            //获取父级
+            let parent = e.target.parentNode;
+
+            //邮箱
+            if(parent.className === 'email'){
+                //获取邮箱值
+                let _email = e.target.value;
+                //邮箱格式验证
+                let reg = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/;
+                test(reg,_email,span[1]);
+                if(reg.test(_email)){
+                    //建立与服务器的连接
+                    xhr.open('get','../api/reg.php?email='+_email,true);
+                    //发送请求
+                    xhr.send();
+                }
+            }
+        }
+
+        //检测格式
+        function test(reg,val,ele){
+            if(!reg.test(val)){
+                ele.innerText = '格式不正确';
+                ele.style.color = '#F10215';
+            }
+        }
     })();
 });

@@ -76,6 +76,7 @@
   border: 1px solid #F10215;
   box-sizing: border-box;
   float: left;
+  padding-left: 10px;
 }
 
 #header .header_search .search button {
@@ -142,6 +143,21 @@
   position: absolute;
   top: 28px;
   right: 0;
+  padding-left: 19px;
+  line-height: 32px;
+  color: #F10215;
+}
+
+#header .header_search .car span {
+  margin-left: 7px;
+}
+
+#header .header_search .car span:nth-child(3) {
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  border-radius: 5px;
+  background: #F10215;
 }
 
 /*banner部分*/
