@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded',()=>{
                     //格式不正确时输出错误提示
                     span.innerText = '请输入3-7位仅由字母、数字或中文组成的用户名';
                     span.style.color = '#F10215';
-                    return false;
                 }else if(reg.test(_username)){
                     //格式正确时验证用户是否存在
                     request(span);
@@ -69,7 +68,6 @@ document.addEventListener('DOMContentLoaded',()=>{
                 if(!reg.test(_password)){
                     span.innerText = '请输入6-15位仅由字母、数字组成的密码';
                     span.style.color = '#F10215';
-                    return false;
                 }else if(reg.test(_password)){
                     span.innerText = '允许注册';
                     span.style.color = '#58bc58';
@@ -83,7 +81,6 @@ document.addEventListener('DOMContentLoaded',()=>{
                 if(_confirm != _password){
                     span.innerText = '两次密码不一致';
                     span.style.color = '#F10215';
-                    return false;
                 }else if(_confirm === _password){
                     span.innerText = '允许注册';
                     span.style.color = '#58bc58';
@@ -97,7 +94,6 @@ document.addEventListener('DOMContentLoaded',()=>{
             if(!reg.test(val)){
                 ele.innerText = '格式不正确';
                 ele.style.color = '#F10215';
-                return false;
             }
         }
 
@@ -112,7 +108,6 @@ document.addEventListener('DOMContentLoaded',()=>{
                     }else if(res === 'no'){
                         ele.innerText = '该用户已被注册';
                         ele.style.color = '#F10215';
-                        return false;
                     }
                 }
             }
@@ -187,13 +182,11 @@ document.addEventListener('DOMContentLoaded',()=>{
             //验证码验证
             if(_code !== _num){
                 alert('验证码不正确');
-                return false;
             }
 
             //非空验证
             if(_username === '' || _email === '' || _password === '' || _phone === '' || _code === '' || _confirm === ''){
                 alert('输入框不能为空');
-                return false;
             }
 
             //存入数据库
