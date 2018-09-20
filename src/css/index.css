@@ -238,6 +238,47 @@ body {
   left: 310px;
   border-radius: 8px;
   background: rgba(204, 204, 204, 0.5);
+  padding-left: 8px;
+}
+
+#banner .banner .middle .top div span {
+  float: left;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  margin: 4px 5px;
+  color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+
+#banner .banner .middle .top div .active {
+  background: #DB192A;
+}
+
+#banner .banner .middle .top .btn-prev, #banner .banner .middle .top .btn-next {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding: 15px 10px;
+  background: rgba(204, 204, 204, 0.5);
+  color: #fff;
+  cursor: pointer;
+}
+
+#banner .banner .middle .top .btn-prev:hover, #banner .banner .middle .top .btn-next:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#banner .banner .middle .top .btn-next {
+  left: auto;
+  right: 0;
+}
+
+#banner .banner .middle .top:hover .btn-prev, #banner .banner .middle .top:hover .btn-next {
+  display: block;
 }
 
 #banner .banner .middle .bottom {

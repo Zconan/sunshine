@@ -1,0 +1,237 @@
+/*header部分*/
+#header{
+    background: #fff;
+    padding-bottom: 15px;
+    .header_list{
+        background: #E3E4E5;
+        height: 30px;
+        border-bottom: 1px solid #DDD;
+        padding-right: 31px;
+        ul{
+            float: right;
+            li{
+                float: left;
+                padding: 0 12px 0 13px;
+                background: url(../img/header_list_border.png) no-repeat left center;
+                a{
+                    font-size: 12px;
+                    line-height: 30px;
+                    color: #999;
+                    &:hover{
+                        color: #F10215;
+                    }
+                }
+                i{
+                    display: inline-block;
+                    width: 10px;
+                    height: 5px;
+                    background: url(../img/header_list_arrow.png) no-repeat;
+                    margin-left: 4px;
+                }
+            }
+            li:nth-child(1){
+                    background: none;
+                }
+            li:nth-child(2) a:nth-child(1){
+                color: #F10215;
+            }
+        }
+    }
+    .header_search{
+        height: 88px;
+        .logo{
+            float: left;
+            a{
+                display: block;
+                width: 190px;
+                height: 88px;
+                background: url(../img/logo.png) no-repeat 22px 21px;
+            }
+        }
+        .search{
+            width: 550px;
+            margin-top: 25px;
+            float: right;
+            input{
+                width: 500px;
+                height: 35px;
+                border: 1px solid #F10215;
+                box-sizing: border-box;
+                float: left;
+                padding-left: 10px;
+            }
+            button{
+                width: 50px;
+                height: 35px;
+                float: right;
+                background: #F10215;
+                color: #fff;
+                margin-top: -1px;
+            }
+        }
+    }
+}
+/*car部分*/
+#car{
+    padding-bottom: 15px;
+    .car{
+        .all{
+            height: 38px;
+            border-bottom: 1px solid #E0E0E0;
+            span{
+                line-height: 38px;
+                color: #E4393C;
+                font-size: 16px;
+                font-weight: bolder;
+                i{
+                    padding: 0 5px;
+                }
+            }
+        }
+        .content{
+            ul{
+                li{
+                    overflow: hidden;
+                    padding-left: 20px;
+                    p{
+                        float: left;
+                        font-size: 12px;
+                        color: #666;
+                        input[type=checkbox]{
+                            margin-top: -2px;
+                        }
+                    }
+                    p:nth-child(1){
+                        width: 120px;
+                    }
+                    p:nth-child(2){
+                        width: 530px;
+                    }
+                    p:nth-child(3),p:nth-child(4),p:nth-child(5){
+                        width: 130px;
+                    }
+                }
+            }
+            .title{
+                height: 45px;
+                line-height: 45px;
+                background: #F3F3F3;
+            }
+            .goods{
+                margin-top: 15px;
+                li{
+                    height: 112px;
+                    border-bottom: 1px solid #C5C5C5;
+                    background: #FFF4E8;
+                    line-height: 112px;
+                    .good_check{
+                        input{
+                            padding-right: 5px;
+                        }
+                        img{
+                            width: 78px;
+                            height: 78px;
+                        }
+                    }
+                    .good_num{
+                        .nownum{
+                            width: 30px;
+                            height: 30px;
+                            text-align: center;
+                            border: 1px solid #CACBCB;
+                        }
+                        span{
+                            cursor: pointer;
+                            padding: 5px;
+                        }
+                    }
+                    .good_del{
+                        a{
+                            padding: 0 5px;
+                        }
+                    }
+                }
+            }
+        }
+        .account{
+            margin-top: 15px;
+            padding-left: 20px;
+            border: 1px solid #F0F0F0;
+            height: 52px;
+            line-height: 52px;
+            input[type=checkbox]{
+                margin-top: -2px;
+            }
+            a{
+                padding-left: 30px;
+                font-size: 12px;
+            }
+            div{
+                float: right;
+                span{
+                    padding: 0 10px;
+                    i{
+                        color: #E64346;
+                    }
+                }
+                button{
+                    width: 96px;
+                    background: #E64346;
+                    font-size: 18px;
+                    color: #fff;
+                }
+                .total_price{
+                    i{
+                        font-size: 14px;
+                        font-weight: bolder;
+                    }
+                }
+            }
+        }
+    }
+}
+/*footer部分*/
+#footer{
+    background: #EAEAEA;
+    .top{
+        border-bottom: 1px solid #DEDEDE;
+        ul{
+            width: 1188px;
+            margin: 0 auto;
+            li{
+                float: left;
+                width: 297px;
+                height: 102px;
+                line-height: 102px;
+                font-size: 18px;
+                font-weight: bolder;
+                padding-left: 81px;
+            }
+            li:nth-child(1){
+                background: url(../img/duo.png) no-repeat 35px 30px;
+            }
+            li:nth-child(2){
+                background: url(../img/kuai.png) no-repeat 35px 30px;
+            }
+            li:nth-child(3){
+                background: url(../img/hao.png) no-repeat 35px 30px;
+            }
+            li:nth-child(4){
+                background: url(../img/sheng.png) no-repeat 35px 30px;
+            }
+        }
+    }
+    .bottom{
+        height: 142px;
+        margin-top: 40px;
+        padding-top: 25px;
+        border-top: 1px solid #DEDEDE;
+        text-align: center;
+        background: url(../img/footer_background.png) no-repeat center 80px;
+        span{
+            line-height: 22px;
+            font-size: 12px;
+            color: #999；
+        }
+    }
+}

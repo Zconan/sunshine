@@ -125,6 +125,7 @@
   padding-left: 19px;
   line-height: 32px;
   color: #F10215;
+  cursor: pointer;
 }
 
 #header .header_search .car span {
@@ -421,6 +422,7 @@
   width: 194px;
   height: 425px;
   border: 1px solid #fff;
+  position: relative;
 }
 
 #goodslist .goodslist .bottom .right .goods ul li a {
@@ -462,6 +464,18 @@
   line-height: 20px;
   font-size: 12px;
   color: #666;
+}
+
+#goodslist .goodslist .bottom .right .goods ul li button {
+  width: 80px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  color: #fff;
+  background: #E4393C;
+  position: absolute;
+  bottom: 45px;
+  border-radius: 5px;
 }
 
 #goodslist .goodslist .bottom .right .page {

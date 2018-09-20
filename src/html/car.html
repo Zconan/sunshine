@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>购物车页</title>
+    <link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../css/base(pc).css" />
+    <link rel="stylesheet" type="text/css" href="../css/car.css" />
+</head>
+<body>
+    <!-- header部分 -->
+    <div id="header">
+        <div class="header_list">
+            <ul class="clearfix">
+                <li><a href="#">APP下载</a><i></i></li>
+                <li><a href="#">请登录</a> <a href="#">免费注册</a></li>
+                <li><a href="#">每日签到</a></li>
+                <li><a href="#">企业采购</a></li>
+                <li><a href="#">客户服务</a></li>
+                <li><a href="#">个人中心</a><i></i></li>
+                <li><a href="#">成为VIP</a></li>
+            </ul>
+        </div>
+        <div class="header_search con">
+            <div class="logo">
+                <a href="#"></a>
+            </div>
+            <div class="search clearfix">
+                <input type="text" />
+                <button class="glyphicon glyphicon-search"></button>
+            </div>
+        </div>
+    </div>
+    <!-- car部分 -->
+    <div id="car">
+        <div class="car con">
+            <div class="all">
+                <span>全部商品<i>3</i></span>
+            </div>
+            <div class="content">
+                <ul class="title">
+                    <li>
+                        <p><input type="checkbox" />&nbsp;全选</p>
+                        <p>商品</p>
+                        <p>单价</p>
+                        <p>数量</p>
+                        <p>小计</p>
+                        <p>操作</p>
+                    </li>
+                </ul>
+                <ul class="goods">
+                    <li>
+                        <p class="good_check">
+                            <input type="checkbox" /><img src="../img/g24.jpg" alt="" />
+                        </p>
+                        <p class="good_name">西班牙LME珞曼西茉莉身体乳保湿滋润补水去鸡皮肤美白润肤乳500ml</p>
+                        <p class="good_price">￥&nbsp;128.0</p>
+                        <p class="good_num">
+                            <span class="cutnum">-</span><input class="nownum" type="text" value="2" /><span class="addnum">+</span>
+                        </p>
+                        <p class="good_total">￥&nbsp;256.0</p>
+                        <p class="good_del">
+                            <a href="#">删除</a>&nbsp;&nbsp;<a href="#">移入收藏夹</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="good_check">
+                            <input type="checkbox" /><img src="../img/g26.jpg" alt="" />
+                        </p>
+                        <p class="good_name">集甜社月饼礼盒装高档流心奶黄黑松露中秋送礼张艺谋电影合作款6枚装
+                        </p>
+                        <p class="good_price">￥&nbsp;332.0</p>
+                        <p class="good_num">
+                            <span class="cutnum">-</span><input class="nownum" type="text" value="1" /><span class="addnum">+</span>
+                        </p>
+                        <p class="good_total">￥&nbsp;332.0</p>
+                        <p class="good_del">
+                            <a href="#">删除</a>
+                            <a href="#">移入收藏夹</a>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="account">
+                <input type="checkbox" />&nbsp;全选
+                <a href="#">删除选中商品</a>
+                <div>
+                    <span class="total_num">已选<i>0</i>件商品</span>
+                    <span class="total_price">共计(不包含运费)<i>￥0.0</i></span>
+                    <button>去结算</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer部分 -->
+    <div id="footer">
+        <div class="top">
+            <ul class="clearfix">
+                <li>品类齐全，轻松购物</li>
+                <li>多仓直发，极速配送</li>
+                <li>正品好货，精致服务</li>
+                <li>天天低价，畅选无忧</li>
+            </ul>
+        </div>
+        <div class="bottom con">
+            <span>浙ICP备14001577号-1</span><br/>
+            <span>@ 2005-2018 跨境淘 版权所有，并保留所有权利。</span>
+        </div>
+    </div>
+    <script src="../js/jquery-1.10.1.min.js"></script>
+    <script src="../js/car.js"></script>
+</body>
+</html>
