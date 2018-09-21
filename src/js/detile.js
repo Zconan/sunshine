@@ -1,82 +1,39 @@
 document.addEventListener('DOMContentLoaded',()=>{
-    //放大镜功能
-    (function(){
-        //获取相关元素
-        let top = document.querySelector('.detile .left .top');
-        let bigBox = document.querySelector('.detile .left .big_box');
-        let bigImg = bigBox.children[0];
-        let lay = top.children[1];
-        //鼠标移入bigBox和lay显示出来
-        top.onmouseover = ()=>{
-            lay.style.display = 'block';
-            bigBox.style.display = 'block';
-        }
-        //鼠标移出bigBox和lay隐藏
-        top.onmouseout = ()=>{
-            lay.style.display = 'none';
-            bigBox.style.display = 'none';
-        }
-        top.onmousemove = function(e){
-            //图片的放缩比例
-            let scale = 4;
-            //将鼠标放在放大镜中间
-            let x = e.clientX - lay.offsetWidth/2;
-            let y = e.clientY - lay.offsetHeight/2;
-            //将放大镜宽高和盒子结合起来按比例放缩
-            lay.style.width = parseInt(this.offsetWidth/scale) + 'px';
-            lay.style.height = parseInt(this.offsetHeight/scale) + 'px';
-            //设置大盒子宽高
-            bigBox.style.width = this.offsetWidth*scale + 'px';
-            bigBox.style.height = this.offsetHeight*scale + 'px';
-            if(x < 0){
-                x = 0;
-            }
-            if(x >= this.offsetWidth - lay.offsetWidth){
-                x = this.offsetWidth - lay.offsetWidth;
-            }
-            if(y >= this.offsetHeight - lay.offsetHeight){
-                y = this.offsetHeight - lay.offsetHeight;
-            }
-            if(y < 0){
-                y = 0;
-            }
-            lay.style.left = x + 'px';
-            lay.style.top = y + 'px';
-            //同比例放缩，大的盒子图片的放缩比例，当小盒子向右移的时候，大盒子向左移同等比例的宽高
-            let left = lay.offsetLeft*scale
-            let top = lay.offsetTop*scale;
-            bigImg.style.marginLeft = (left*(-1)) + 'px';
-            bigImg.style.marginTop = (top*(-1)) + 'px';
-        }
-    })();
 
     //显示商品页点击商品的详情信息
     (function(){
-        let res = location.search;//'?id=001&name=xxx';
-
+        let res = location.search;
         //截取
         res = res.substring(1);
-
-        //String -> Object
+        //String->Object
         res = res.split('&');
 
-        // 用于存放name,value
         let obj = {};
 
         res.forEach(function(item){
-            // 拆分name/value
+            //拆分
             let arr = item.split('=');
-
             obj[arr[0]] = decodeURI(arr[1]);
         });
 
         //获取相关元素
-        let imgs = document.querySelectorAll('.detile .left img');
+        //放大镜功能
+        let left = document.querySelector('.detile .left');
+        left.innerHTML =   `<div class="demo">
+                                <a class="cloud-zoom" id="zoom1" href="${obj.imgurl}" rel="adjustX: 10, adjustY:-4, softFocus:true">
+                                    <img src="${obj.imgurl}" title="" alt="" />
+                                </a>
+                                <a href='${obj.imgurl}' class='cloud-zoom-gallery' title='Thumbnail 1' rel="useZoom: 'zoom1', smallImage: '${obj.imgurl}' ">
+                                    <img src="${obj.imgurl}" alt = "Thumbnail 1"/ style="width:50px;height:50px;">
+                                </a>   
+                                <a href='${obj.imgurl}' class='cloud-zoom-gallery' title='Thumbnail 2' rel="useZoom: 'zoom1', smallImage: '${obj.imgurl}'">
+                                    <img src="${obj.imgurl}" alt = "Thumbnail 2" style="width:50px;height:50px;"/>
+                                </a>                  
+                            </div>`;
         let h4 = document.querySelector('.detile .right h4');
-        for(let i=0;i<imgs.length;i++){
-            imgs[i].src = obj.imgurl;
-        }
+        let price = document.querySelector('.detile .right .price p:first-child span');
         h4.innerText = obj.name;
+        price.innerText = '￥' + obj.price;
 
     })();
 });

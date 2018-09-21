@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         let input1 = document.createElement('input');
         input1.type = 'checkbox';
         let img1 = document.createElement('img');
-        img1.src = 'goodslist[i].imgurl';
+        img1.src = goodslist[i].imgurl;
         p1.appendChild(input1);
         p1.appendChild(img1);
         li.appendChild(p1);

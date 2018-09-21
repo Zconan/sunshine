@@ -242,79 +242,11 @@
   width: 350px;
   height: 513px;
   float: left;
-  position: relative;
 }
 
-#detile .detile .left .top {
-  height: 350px;
-  border: 1px solid #EBE8F6;
-  position: relative;
-}
-
-#detile .detile .left .top img {
-  width: 348px;
-}
-
-#detile .detile .left .top span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 1px solid #EBE8F6;
-  background: #DDD;
-  opacity: 0.5;
-  display: none;
-}
-
-#detile .detile .left .big_box {
-  height: 350px;
-  position: absolute;
-  top: 0;
-  left: 360px;
-  border: 1px solid #EBE8F6;
-  overflow: hidden;
-  display: none;
-}
-
-#detile .detile .left .big_box img {
-  width: 348px;
-}
-
-#detile .detile .left .bottom {
+#detile .detile .left .demo a:first-child img {
   width: 350px;
-  height: 54px;
-  margin-top: 12px;
-}
-
-#detile .detile .left .bottom i {
-  width: 20px;
-  height: 54px;
-  line-height: 54px;
-  color: #DDD;
-}
-
-#detile .detile .left .bottom i:first-child {
-  float: left;
-}
-
-#detile .detile .left .bottom i:last-child {
-  float: right;
-}
-
-#detile .detile .left .bottom ul {
-  float: left;
-  width: 310px;
-  height: 54px;
-}
-
-#detile .detile .left .bottom ul li {
-  width: 54px;
-  height: 54px;
-  border: 1px solid #E4393C;
-}
-
-#detile .detile .left .bottom ul li img {
-  width: 52px;
-  height: 52px;
+  height: 350px;
 }
 
 #detile .detile .right {

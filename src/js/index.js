@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded',()=>{
                 let ul = document.createElement('ul');
                 ul.innerHTML = res.map(item=>{
                     return `<li data-guid="${item.id}">
-                                <img src="${item.imgurl}" />
+                                <img class="pic" src="${item.imgurl}" />
                                 <h4>${item.title}</h4>
                                 <p class="price">￥ ${item.price}</p>
                             </li>`;
@@ -31,6 +31,54 @@ document.addEventListener('DOMContentLoaded',()=>{
         //发送请求
         xhr.send();     
         
+    })();
+
+    //点击商品进入详情页(页面传参实现)
+    (function(){
+        //获取相关元素
+        let goods = document.querySelector('.goodslist');
+
+        //事件委托绑定事件
+        goods.onclick = e=>{
+            
+            //点击商品进入详情页(页面传参实现)
+            if(e.target.className === 'pic'){
+                //获取当前li
+                let currentLi = e.target.parentNode;
+
+                //商品唯一标识
+                let guid = currentLi.getAttribute('data-guid');
+
+                //保存商品信息
+                let good1 = {
+                    guid : guid,
+                    imgurl : currentLi.children[0].src,
+                    price : currentLi.children[2].innerText,
+                    name : currentLi.children[1].innerText, 
+                };
+
+                //将商品信息转成特定格式的字符串
+                let res = '';
+                for(let key in good1){
+                    res += key + '=' + encodeURI(good1[key]) + '&'
+                }
+                //去除多余的&
+                res = res.slice(0,-1);
+
+                //跳转详情页
+                location.href = 'src/html/detile.html?' + res;
+            }
+        }
+        
+    })();
+
+    //跳转购物车
+    (function(){
+        //获取相关元素
+        let car = document.querySelector('.header_search .car');
+        car.onclick = ()=>{
+            location.href = 'src/html/car.html';
+        }
     })();
 
     //轮播图

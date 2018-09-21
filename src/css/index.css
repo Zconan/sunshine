@@ -164,6 +164,7 @@ body {
   padding-left: 19px;
   line-height: 32px;
   color: #F10215;
+  cursor: pointer;
 }
 
 #header .header_search .car span {
