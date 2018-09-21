@@ -1,5 +1,7 @@
 阳光海淘电商网站项目
 
+github网址：https://github.com/Zconan/sunshine
+
 目录
  .git 本地仓库
  dist 构建目录文件
