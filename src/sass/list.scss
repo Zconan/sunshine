@@ -355,12 +355,16 @@
                             height: 425px;
                             border: 1px solid #fff;
                             position: relative;
-                            a{
-                                display: block;
-                                img{
-                                    width: 190px;
-                                    height: 190px; 
-                                }
+                            // a{
+                            //     display: block;
+                            //     img{
+                            //         width: 190px;
+                            //         height: 190px; 
+                            //     }
+                            // }
+                            .pic{
+                                width: 190px;
+                                height: 190px;
                             }
                             .small{
                                 display: block;

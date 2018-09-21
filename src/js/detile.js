@@ -49,4 +49,34 @@ document.addEventListener('DOMContentLoaded',()=>{
             bigImg.style.marginTop = (top*(-1)) + 'px';
         }
     })();
+
+    //显示商品页点击商品的详情信息
+    (function(){
+        let res = location.search;//'?id=001&name=xxx';
+
+        //截取
+        res = res.substring(1);
+
+        //String -> Object
+        res = res.split('&');
+
+        // 用于存放name,value
+        let obj = {};
+
+        res.forEach(function(item){
+            // 拆分name/value
+            let arr = item.split('=');
+
+            obj[arr[0]] = decodeURI(arr[1]);
+        });
+
+        //获取相关元素
+        let imgs = document.querySelectorAll('.detile .left img');
+        let h4 = document.querySelector('.detile .right h4');
+        for(let i=0;i<imgs.length;i++){
+            imgs[i].src = obj.imgurl;
+        }
+        h4.innerText = obj.name;
+
+    })();
 });

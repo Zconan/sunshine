@@ -158,7 +158,8 @@ jQuery(function($){
     }
       
 });
-//加入购物车
+
+//商品加入购物车功能
 document.addEventListener('DOMContentLoaded',()=>{
     //获取相关元素
     let goods = document.querySelector('.goods');   

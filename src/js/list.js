@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded',()=>{
-    //点击页数加载商品列表(与后端实现)
+
+    //实现分页加载商品列表以及价格销量排序功能(与后端交互实现)
     (function(){
         //获取相关元素
         let goods = document.querySelector('#goodslist .goodslist .bottom .right .goods');
@@ -36,7 +37,7 @@ document.addEventListener('DOMContentLoaded',()=>{
                 let ul = document.createElement('ul');
                 ul.innerHTML = res.data.map(item=>{
                     return `<li data-guid="${item.id}">
-                                <a href="#"><img src="${item.imgurl}" /></a>
+                                <img class="pic" src="${item.imgurl}" />
                                 <span class="small"><img src="${item.imgurl}" /></span> 
                                 <p class="price">价格：<span>${item.price}</span></p>
                                 <h4>${item.title}</h4>
@@ -80,7 +81,8 @@ document.addEventListener('DOMContentLoaded',()=>{
         
     })();
 
-    //加入购物车
+    //加入购物车(cookie实现)
+    //点击商品进入详情页(页面传参实现)
     (function(){
         //获取相关元素
         let goods = document.querySelector('.goods');
@@ -97,7 +99,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
         //事件委托绑定事件
         goods.onclick = e=>{
-
+            //加入购物车(cookie实现)
             if(e.target.className === 'addCar'){
                 //获取当前li
                 let currentLi = e.target.parentNode;
@@ -117,7 +119,7 @@ document.addEventListener('DOMContentLoaded',()=>{
                     //保存商品信息
                     let good = {
                         guid : guid,
-                        imgurl : currentLi.children[0].children[0].src,
+                        imgurl : currentLi.children[0].src,
                         price : currentLi.children[2].innerText,
                         name : currentLi.children[3].innerText, 
                         //数量,第一次点击时数量为1,多次点击时在原来基础上加1
@@ -131,11 +133,39 @@ document.addEventListener('DOMContentLoaded',()=>{
                 document.cookie = 'goodslist=' + JSON.stringify(goodslist);
 
             }
+            
+            //点击商品进入详情页(页面传参实现)
+            if(e.target.className === 'pic'){
+                //获取当前li
+                let currentLi = e.target.parentNode;
+
+                //商品唯一标识
+                let guid = currentLi.getAttribute('data-guid');
+
+                //保存商品信息
+                let good2 = {
+                    guid : guid,
+                    imgurl : currentLi.children[0].src,
+                    price : currentLi.children[2].innerText,
+                    name : currentLi.children[3].innerText, 
+                };
+
+                //将商品信息转成特定格式的字符串
+                let res = '';
+                for(let key in good2){
+                    res += key + '=' + encodeURI(good2[key]) + '&'
+                }
+                //去除多余的&
+                res = res.slice(0,-1);
+
+                //跳转详情页
+                location.href = '../html/detile.html?' + res;
+            }
         }
         
     })();
 
-    //去购物车
+    //去购物车(location.href跳转实现)
     (function(){
         //获取相关元素
         let car = document.querySelector('.header_search .car');
@@ -143,4 +173,5 @@ document.addEventListener('DOMContentLoaded',()=>{
             location.href = '../html/car.html';
         }
     })();
+
 });

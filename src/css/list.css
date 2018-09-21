@@ -425,11 +425,7 @@
   position: relative;
 }
 
-#goodslist .goodslist .bottom .right .goods ul li a {
-  display: block;
-}
-
-#goodslist .goodslist .bottom .right .goods ul li a img {
+#goodslist .goodslist .bottom .right .goods ul li .pic {
   width: 190px;
   height: 190px;
 }

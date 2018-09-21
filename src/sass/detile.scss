@@ -207,6 +207,8 @@
                 height: 350px;
                 border: 1px solid #EBE8F6;
                 position: relative;
+
+                // z-index: 1;
                 img{
                     width: 348px;
                 }
@@ -218,6 +220,14 @@
                     background: #DDD;
                     opacity: 0.5;
                     display: none;
+
+                    // display: none;
+                    // width: 160px;
+                    // height: 120px;
+                    // position: absolute;
+                    // background: #ffffcc;
+                    // border: 1px solid #ccc;
+                    // opacity: 0.5;
                 }
             }
             .big_box{
@@ -228,8 +238,13 @@
                 border: 1px solid #EBE8F6;
                 overflow: hidden;
                 display: none;
+
+                // z-index: 1;
                 img{
                     width: 348px;
+
+                    // position: absolute;
+                    // z-index: 5;
                 }
             }
             .bottom{

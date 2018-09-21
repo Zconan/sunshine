@@ -1,4 +1,6 @@
 <?php
+
+    //注册成功存入数据库
     
     //引入连接服务器
     require('connect.php');
