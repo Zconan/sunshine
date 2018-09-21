@@ -36,4 +36,5 @@ document.addEventListener('DOMContentLoaded',()=>{
         price.innerText = '￥' + obj.price;
 
     })();
+
 });
